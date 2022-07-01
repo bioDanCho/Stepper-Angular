@@ -5,17 +5,11 @@
         [idx]="idx"
     ></app-stepper-item>
     <div class="progress-bar-empty"></div>
-    <div
-        class="progress-bar-filled"
-        style="width: {{ currentIndex * (100 / (stepperData.length - 1)) }}%"
-    ></div>
+    <div class="progress-bar-filled" [ngStyle]="{ width: progressWidth }"></div>
 </div>
 
 <div class="carousel">
-    <div
-        class="inner"
-        style="transform: translateX(-{{ currentIndex * 100 }}%)"
-    >
+    <div class="inner" [ngStyle]="{ transform: translatePercentage }">
         <div class="carousel-item" style="width: 100%">
             <app-name-form></app-name-form>
         </div>

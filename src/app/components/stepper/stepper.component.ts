@@ -10,10 +10,18 @@ import { StepperService } from 'src/app/services/stepper.service';
 export class StepperComponent implements OnInit {
     stepperData!: StepperModel[];
     currentIndex!: number;
+    progressWidth!: string;
+    translatePercentage!: string;
 
     constructor(private stepperService: StepperService) {
         this.stepperService.activeIndexUpdated.subscribe((index) => {
             this.currentIndex = index;
+            this.progressWidth = `${
+                this.currentIndex * (100 / (this.stepperData.length - 1))
+            }%`;
+            this.translatePercentage = `translateX(-${
+                this.currentIndex * 100
+            }%)`;
         });
     }
 
