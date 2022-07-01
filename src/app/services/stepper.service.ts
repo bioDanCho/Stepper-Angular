@@ -4,8 +4,9 @@ import { StepperModel } from '../models/stepper.model';
 @Injectable()
 export class StepperService {
     private stepperData: StepperModel[] = [
-        new StepperModel('Fill out your name'),
-        new StepperModel('Fill out your address'),
+        new StepperModel('Name Info'),
+        new StepperModel('Contact info'),
+        new StepperModel('Address Info'),
         new StepperModel('Done'),
     ];
 

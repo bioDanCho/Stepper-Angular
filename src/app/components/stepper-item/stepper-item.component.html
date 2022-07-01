@@ -1,7 +1,7 @@
 <div class="stepper-item-container" (click)="stepperItemClicked()">
     <div class="clickable">
         <div
-            *ngIf="currentIndex === idx; else notSelected"
+            *ngIf="currentIndex >= idx; else notSelected"
             class="number selected"
         >
             {{ idx + 1 }}

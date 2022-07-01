@@ -8,6 +8,7 @@ import { NameFormComponent } from './components/name-form/name-form.component';
 import { AddressFormComponent } from './components/address-form/address-form.component';
 import { DoneFormComponent } from './components/done-form/done-form.component';
 import { StepperService } from './services/stepper.service';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 @NgModule({
     declarations: [
@@ -17,6 +18,7 @@ import { StepperService } from './services/stepper.service';
         NameFormComponent,
         AddressFormComponent,
         DoneFormComponent,
+        ContactFormComponent,
     ],
     imports: [BrowserModule],
     providers: [StepperService],

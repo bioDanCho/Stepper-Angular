@@ -1,6 +1,7 @@
 .stepper-container {
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .form-container {
@@ -36,4 +37,23 @@
     /* height: 200px; */
     /* background-color: green;
     color: #fff; */
+}
+
+.progress-bar-empty {
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    top: 50%;
+    z-index: -100;
+    background: grey;
+}
+
+.progress-bar-filled {
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    top: 50%;
+    z-index: -50;
+    background: blue;
+    transition: width 1s cubic-bezier(0.23, 1, 0.32, 1) 0s;
 }

@@ -1,43 +1,45 @@
-<div style="border: 1px solid red">
-    <div class="stepper-container">
-        <app-stepper-item
-            *ngFor="let item of stepperData; let idx = index"
-            [label]="item.label"
-            [idx]="idx"
-        ></app-stepper-item>
-    </div>
+<div class="stepper-container">
+    <app-stepper-item
+        *ngFor="let item of stepperData; let idx = index"
+        [label]="item.label"
+        [idx]="idx"
+    ></app-stepper-item>
+    <div class="progress-bar-empty"></div>
+    <div
+        class="progress-bar-filled"
+        style="width: {{ currentIndex * (100 / (stepperData.length - 1)) }}%"
+    ></div>
+</div>
 
-    <div class="carousel">
-        <div
-            class="inner"
-            style="transform: translateX(-{{ currentIndex * 100 }}%)"
-        >
-            <div class="carousel-item" style="width: 100%">
-                <app-name-form></app-name-form>
-            </div>
-            <div class="carousel-item" style="width: 100%">
-                <app-address-form></app-address-form>
-            </div>
-            <div class="carousel-item" style="width: 100%">
-                <app-done-form></app-done-form>
-            </div>
+<div class="carousel">
+    <div
+        class="inner"
+        style="transform: translateX(-{{ currentIndex * 100 }}%)"
+    >
+        <div class="carousel-item" style="width: 100%">
+            <app-name-form></app-name-form>
+        </div>
+        <div class="carousel-item" style="width: 100%">
+            <app-contact-form></app-contact-form>
+        </div>
+        <div class="carousel-item" style="width: 100%">
+            <app-address-form></app-address-form>
+        </div>
+        <div class="carousel-item" style="width: 100%">
+            <app-done-form></app-done-form>
         </div>
     </div>
+</div>
 
-    <div class="button-container">
-        <button
-            class="btn-back"
-            *ngIf="currentIndex > 0"
-            (click)="onBackClick()"
-        >
-            Back
-        </button>
-        <button
-            class="btn-next"
-            *ngIf="currentIndex < stepperData.length - 1"
-            (click)="onNextClick()"
-        >
-            Next
-        </button>
-    </div>
+<div class="button-container">
+    <button class="btn-back" *ngIf="currentIndex > 0" (click)="onBackClick()">
+        Back
+    </button>
+    <button
+        class="btn-next"
+        *ngIf="currentIndex < stepperData.length - 1"
+        (click)="onNextClick()"
+    >
+        Next
+    </button>
 </div>
