@@ -1,0 +1,35 @@
+.stepper-item-container {
+    border: 1px solid blue;
+    display: flex;
+    align-items: center;
+}
+
+.clickable {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.clickable:hover {
+    transition: all 0.3s;
+    background-color: aliceblue;
+}
+
+.number {
+    border-radius: 100%;
+    background-color: grey;
+    color: white;
+    height: 2rem;
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selected {
+    background-color: blue;
+}
+
+h4 {
+    padding: 0 0.5rem;
+}

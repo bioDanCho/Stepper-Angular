@@ -1,0 +1,39 @@
+.stepper-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.button-container {
+    position: relative;
+}
+
+.btn-next {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.carousel {
+    overflow: hidden;
+}
+
+.inner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+}
+
+.carousel-item {
+    display: inline-flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* height: 200px; */
+    /* background-color: green;
+    color: #fff; */
+}
