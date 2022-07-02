@@ -9,6 +9,7 @@ import { AddressFormComponent } from './components/address-form/address-form.com
 import { DoneFormComponent } from './components/done-form/done-form.component';
 import { StepperService } from './services/stepper.service';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { ActiveStepDirective } from './directives/active-step.directive';
 
 @NgModule({
     declarations: [
@@ -19,6 +20,7 @@ import { ContactFormComponent } from './components/contact-form/contact-form.com
         AddressFormComponent,
         DoneFormComponent,
         ContactFormComponent,
+        ActiveStepDirective,
     ],
     imports: [BrowserModule],
     providers: [StepperService],

@@ -1,14 +1,13 @@
 <div class="stepper-item-container" (click)="stepperItemClicked()">
     <div class="clickable">
         <div
-            *ngIf="currentIndex >= idx; else notSelected"
-            class="number selected"
+            class="number"
+            appActiveStep
+            [currentIndex]="currentIndex"
+            [idx]="idx"
         >
             {{ idx + 1 }}
         </div>
-        <ng-template #notSelected>
-            <div class="number">{{ idx + 1 }}</div>
-        </ng-template>
         <h4>{{ label }}</h4>
     </div>
 </div>

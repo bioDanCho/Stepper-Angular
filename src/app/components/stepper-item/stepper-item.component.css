@@ -28,6 +28,7 @@
 }
 
 .selected {
+    transition: all 0.5s;
     background-color: blue;
 }
 
