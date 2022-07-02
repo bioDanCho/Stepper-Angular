@@ -17,8 +17,6 @@ export class ActiveStepDirective implements OnChanges {
     constructor(private elRef: ElementRef, private renderer: Renderer2) {}
 
     ngOnChanges(changes: SimpleChanges): void {
-        console.log(changes);
-        console.log(this.idx, this.currentIndex);
         if (this.currentIndex >= this.idx) {
             this.renderer.addClass(this.elRef.nativeElement, 'selected');
         } else {
