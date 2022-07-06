@@ -11,16 +11,6 @@
     display: flex;
 }
 
-.button-container {
-    position: relative;
-}
-
-.btn-next {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
 .carousel {
     overflow: hidden;
 }
@@ -32,11 +22,6 @@
 
 .carousel-item {
     display: inline-flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* height: 200px; */
-    /* background-color: green;
-    color: #fff; */
 }
 
 .progress-bar-empty {
@@ -56,4 +41,37 @@
     z-index: -50;
     background: blue;
     transition: width 1s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+}
+
+/* vertical stepper css */
+.container-vertical {
+    display: flex;
+}
+
+.stepper-container-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    min-height: 30rem;
+    min-width: 10rem;
+}
+
+.progress-bar-empty-vertical {
+    position: absolute;
+    height: 100%;
+    width: 1.5px;
+    left: 1rem;
+    z-index: -100;
+    background: grey;
+}
+
+.progress-bar-filled-vertical {
+    position: absolute;
+    height: 0%;
+    width: 3px;
+    left: 1rem;
+    z-index: -50;
+    background: blue;
+    transition: height 1s cubic-bezier(0.23, 1, 0.32, 1) 0s;
 }
